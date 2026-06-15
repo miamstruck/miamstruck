@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<article class="wrap">
+  <div class="post-header">
+    <div class="case-file-box cat-{{ page.category | default: 'misc' }}">
+      <div class="ref-line">Case file #{{ page.ref | default: "0000-000" }} — {{ page.date | date: "%d %b %Y" }}</div>
+      <dl class="case-file-grid">
+        <div>
+          <dt>Categoría</dt>
+          <dd><span class="tag tag-{{ page.category | default: 'misc' }}">{{ page.category_label | default: page.category | default: "General" }}</span></dd>
+        </div>
+        <div>
+          <dt>Dificultad</dt>
+          <dd>
+            <span class="difficulty">
+              {% assign diff = page.difficulty | default: 1 %}
+              {% for i in (1..5) %}
+                <span class="{% if i <= diff %}on{% endif %}"></span>
+              {% endfor %}
+            </span>
+          </dd>
+        </div>
+        {% if page.ctf %}
+        <div>
+          <dt>Origen</dt>
+          <dd>{{ page.ctf }}</dd>
+        </div>
+        {% endif %}
+        <div>
+          <dt>Autor</dt>
+          <dd>{{ site.author }}</dd>
+        </div>
+      </dl>
+    </div>
+    <h1>{{ page.title }}</h1>
+  </div>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {% if page.tags and page.tags.size > 0 %}
+  <div class="post-tags">
+    {% for tag in page.tags %}
+      <span>#{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+</article>
