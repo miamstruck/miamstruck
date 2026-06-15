@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+
+  {% seo %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="{{ '/' | relative_url }}">MIAMSTRUCK<span class="cursor"></span></a>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Writeups</a>
+        <a href="{{ '/categorias/' | relative_url }}" {% if page.url contains '/categorias' %}class="active"{% endif %}>Categorías</a>
+        <a href="{{ '/sobre-mi/' | relative_url }}" {% if page.url contains '/sobre-mi' %}class="active"{% endif %}>Sobre mí</a>
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>MiamStruck — {{ site.time | date: '%Y' }}. Contenido bajo licencia CC BY-NC-SA 4.0.</span>
+      <span><a href="{{ '/feed.xml' | relative_url }}">RSS</a> · <a href="{{ '/sobre-mi/' | relative_url }}">Contacto</a></span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+title: "MiamStruck // Bitácora de Ciberseguridad"
+description: "Writeups técnicos de CTFs, análisis de vulnerabilidades y notas de seguridad ofensiva y defensiva."
+author: MiamStruck
+baseurl: "/miamstruck"
+url: "https://miamstruck.github.io"
+
+permalink: /writeups/:year/:month/:day/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
