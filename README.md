@@ -1,4 +1,4 @@
-# MiamStruck — Bitácora de Ciberseguridad
+# MiamStruck 
 
 Web personal de writeups técnicos (CTFs, análisis de vulnerabilidades, notas de seguridad), construida con [Jekyll](https://jekyllrb.com/) para publicarse gratis en **GitHub Pages**.
 
