@@ -19,6 +19,6 @@ permalink: /sobre-mi/
     <p>Cada writeup se trata como un <em>caso</em>, con una categoría, un nivel de dificultad orientativo y, cuando aplica, la plataforma de origen. Puedes ver todas las categorías en <a href="{{ '/categorias/' | relative_url }}">Categorías</a>.</p>
 
     <h2>Contacto</h2>
-    <p>Si quieres comentar algo sobre un writeup, proponer un tema o reportar un error, puedes escribirme. <em>(Sustituye este texto por tu email, perfil de X/Twitter, LinkedIn, GitHub, etc.)</em></p>
+    <p>Si quieres comentar algo sobre un writeup, proponer un tema o reportar un error, puedes escribirme a <a href="mailto:mcoronadoestruch@gmail.com">mcoronadoestruch@gmail.com</a>.</p>
   </div>
 </div>
