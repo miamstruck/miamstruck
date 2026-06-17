@@ -3,6 +3,7 @@ description: "Writeups técnicos de CTFs, análisis de vulnerabilidades y notas 
 author: MiamStruck
 baseurl: "/miamstruck"
 url: "https://miamstruck.github.io"
+future: true
 
 permalink: /writeups/:year/:month/:day/:title/
 
